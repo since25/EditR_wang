@@ -78,6 +78,9 @@ server <- function(input, output, session) {
       progress_step <- 1 / total_files
 
       if (use_parallel) {
+        # 将变量导出到集群节点
+        parallel::clusterExport(cl, varlist = c("global_r_path", "temp_dir"), envir = environment())
+
         # 在集群节点上加载global.R，使用完整路径
         parallel::clusterEvalQ(cl, {
           source(global_r_path)
