@@ -18,6 +18,7 @@ library(plotly)
 library(yaml)
 library(magrittr)
 library(dplyr)
+library(foreach)
 
 # 定义 getEditing 函数
 getEditing <- function(ab1file, exampleguide, outputF = NA, output = list(), trim3 = NA, trim5 = NA) {

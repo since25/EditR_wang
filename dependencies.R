@@ -14,7 +14,8 @@ install.packages("rmarkdown") # 07.06.2022 if errors that there is no markdown p
 install.packages("plotly")
 install.packages("yaml")
 install.packages("BiocManager")
-
+install.packages("foreach")
+install.packages("doParallel")
 
 # Bioconductor packages
 # Updated 4.7.19 due to error with Bioconductor packages
